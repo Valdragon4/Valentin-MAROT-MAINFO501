@@ -19,9 +19,19 @@ public class ControlePatte : MonoBehaviour
 
     void FixedUpdate() //FixedUpdate est comme Update, mais synchronis� avec le moteur physique d'unity
     {
+
         if (rotationState != EtatRotation.Fixe)
         {
-            float rotationChange = (float)rotationState * speed * Time.fixedDeltaTime;
+            float speed2 = 30.0f;
+            if(rotationState == EtatRotation.Positif)
+            {
+                speed2 = speed;
+            }
+            else if(rotationState == EtatRotation.Negatif)
+            {
+                speed2 = speed/2;
+            }
+            float rotationChange = (float)rotationState * speed2 * Time.fixedDeltaTime;
             float rotationGoal = CurrentPrimaryAxisRotation() + rotationChange;
             RotateTo(rotationGoal);
         }

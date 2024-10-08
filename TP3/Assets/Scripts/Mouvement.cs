@@ -29,11 +29,11 @@ public class Mouvement : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-        transform.Rotate(Vector3.forward, 1);
+        transform.Rotate(Vector3.forward, 0.1f);
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
-        transform.Rotate(Vector3.back, 1);
+        transform.Rotate(Vector3.back, 0.1f);
         }
         GameObject Sol= GameObject.Find("Sol");
         if(Input.GetKeyDown(KeyCode.Space) && ((transform.position.y - Sol.transform.position.y) < 0.1f)){

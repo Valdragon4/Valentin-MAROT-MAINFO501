@@ -38,7 +38,7 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: support_arr_dr_01
+    m_Name: support_rota
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: p
@@ -54,11 +54,11 @@ InputManager:
     axis: 1
     joyNum: 0
   - serializedVersion: 3
-    m_Name: support_arr_ga_01
+    m_Name: support_deploy
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: p
-    positiveButton: o
+    negativeButton: m
+    positiveButton: l
     altNegativeButton: 
     altPositiveButton: 
     gravity: 3
@@ -70,27 +70,11 @@ InputManager:
     axis: 1
     joyNum: 0
   - serializedVersion: 3
-    m_Name: support_av_dr_01
+    m_Name: rotation_mat
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: p
-    positiveButton: o
-    altNegativeButton: 
-    altPositiveButton: 
-    gravity: 3
-    dead: 0.001
-    sensitivity: 3
-    snap: 1
-    invert: 0
-    type: 0
-    axis: 1
-    joyNum: 0
-  - serializedVersion: 3
-    m_Name: support_av_ga_01
-    descriptiveName: 
-    descriptiveNegativeName: 
-    negativeButton: p
-    positiveButton: o
+    negativeButton: g
+    positiveButton: h
     altNegativeButton: 
     altPositiveButton: 
     gravity: 3
