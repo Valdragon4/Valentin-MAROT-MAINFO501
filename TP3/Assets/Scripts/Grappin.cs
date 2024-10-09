@@ -21,7 +21,7 @@ public class Grappin : MonoBehaviour
 
     void OnCollisionEnter(Collision Collision)
     {
-        if (Collision.gameObject.GetComponent<ArticulationBody>() != null){
+        if (Collision.gameObject.CompareTag("crochet")){
         FixedJoint joint = this.gameObject.AddComponent<FixedJoint>();joint.connectedArticulationBody = Collision.articulationBody;}
     }
 }

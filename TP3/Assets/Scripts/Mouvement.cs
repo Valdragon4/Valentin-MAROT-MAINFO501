@@ -16,7 +16,7 @@ public class Mouvement : MonoBehaviour
     void Update(){
         float speed = 0.001f;
         if(Input.GetKey(KeyCode.LeftShift)){
-            speed = 0.005f;
+            speed = 0.008f;
         }
 
         //On fait tourner une roue
@@ -35,11 +35,5 @@ public class Mouvement : MonoBehaviour
         {
         transform.Rotate(Vector3.back, 0.1f);
         }
-        GameObject Sol= GameObject.Find("Sol");
-        if(Input.GetKeyDown(KeyCode.Space) && ((transform.position.y - Sol.transform.position.y) < 0.1f)){
-            Rigidbody rb = GetComponent<Rigidbody>();
-            rb.AddForce(Vector3.up * 5, ForceMode.Impulse);
-        }
-
     }
 }

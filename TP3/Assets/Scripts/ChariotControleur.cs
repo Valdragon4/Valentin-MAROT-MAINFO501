@@ -17,7 +17,7 @@ public class ChariotControleur : MonoBehaviour
             ArticulationBody articulation = GetComponent<ArticulationBody>();
 
             float xDrivePostion = articulation.jointPosition[0];
-            Debug.Log(xDrivePostion);
+
 
             float targetPosition = xDrivePostion + (float)translationEtat * Time.fixedDeltaTime * vitesse;
 
