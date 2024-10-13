@@ -10,6 +10,7 @@ public class declencheur : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        text.text = "Nombre d'objets dans la zone de déclenchement : " + nbObjets;
         
     }
 
@@ -23,16 +24,20 @@ public class declencheur : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other){
+        if(other.gameObject.tag == "charge"){
         nbObjets++;
         Debug.Log("Objet entré dans la zone de déclenchement");
         text.text = "Nombre d'objets dans la zone de déclenchement : " + nbObjets;
+        }
 
     }
 
     private void OnTriggerExit(Collider other){
+        if(other.gameObject.tag == "charge"){
         nbObjets--;
         Debug.Log("Objet sorti de la zone de déclenchement");
         text.text = "Nombre d'objets dans la zone de déclenchement : " + nbObjets;
+        }
 
     }
 }
