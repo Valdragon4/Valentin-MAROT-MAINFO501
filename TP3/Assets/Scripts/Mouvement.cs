@@ -29,11 +29,11 @@ public class Mouvement : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-        transform.Rotate(Vector3.forward, 0.1f);
+        transform.Rotate(Vector3.back, 0.1f);
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
-        transform.Rotate(Vector3.back, 0.1f);
+        transform.Rotate(Vector3.forward, 0.1f);
         }
     }
 }

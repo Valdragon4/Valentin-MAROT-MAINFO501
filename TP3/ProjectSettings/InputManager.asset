@@ -41,8 +41,8 @@ InputManager:
     m_Name: support_rota
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: p
-    positiveButton: o
+    negativeButton: o
+    positiveButton: p
     altNegativeButton: 
     altPositiveButton: 
     gravity: 3
