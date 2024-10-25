@@ -15,7 +15,7 @@ public class Interface : MonoBehaviour
     {
         ScreenWidth = Screen.width;
         ScreenHeight = Screen.height;
-        style.fontSize = (int)(ScreenWidth / 75);
+        style.fontSize = (int)(ScreenWidth / 85);
         style.normal.textColor = Color.white;
         Background = new Texture2D(1, 1);
         Background.SetPixel(0, 0, new Color(0, 0, 0, 0.5f));
