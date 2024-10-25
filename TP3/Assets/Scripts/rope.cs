@@ -1,30 +1,26 @@
 using UnityEngine;
-using System.Collections;
 
-public class onload : MonoBehaviour {
+public class rope : MonoBehaviour
+{
+    public Transform moufle;
+    public Transform crochet;
+    public LineRenderer lineRenderer;
+    private Vector3[] bezierPoints = new Vector3[4];
 
-
-
-    public GameObject cubeBottom;
-    public GameObject cubeTop;
-
-
-    void Start ()
+    void Start()
     {
-
-        LineRenderer lineRenderer = GetComponent<LineRenderer> ();
-
-        lineRenderer.SetPosition (0, cubeBottom.transform.localPosition);
-        lineRenderer.SetPosition (1, cubeTop.transform.localPosition);
-        lineRenderer.endWidth = 0.1f;
-        lineRenderer.startWidth = 0.1f;
-        lineRenderer.material.color = Color.black;
-
+        lineRenderer.startWidth = 0.01f;
+        lineRenderer.endWidth = 0.01f;
+        lineRenderer.positionCount = 2;
+        lineRenderer.material = new Material(Shader.Find("Sprites/Default"));
+        lineRenderer.startColor = Color.black;
+        lineRenderer.endColor = Color.black;
     }
 
-    void Update ()
+    void Update()
     {
-
+        lineRenderer.SetPosition(0, moufle.position);
+        lineRenderer.SetPosition(1, crochet.position);
     }
 
 }
